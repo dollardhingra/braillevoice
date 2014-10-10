@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutHomeButtonFirstRow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="90" >
+
+        <Button
+            android:id="@+id/buttonbacknews"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:text="Back" />
+
+    <Button
+        android:id="@+id/buttonResult"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         android:layout_weight="30"
+        android:text="refresh" />
+
+    <TextView
+        android:id="@+id/textViewRediff"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="30"
+        android:gravity="center"
+        android:text="Powered by Rediff" />
+    
+    </LinearLayout>
+
+  <ListView
+        android:id="@+id/sitesList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

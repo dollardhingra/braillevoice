@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.technovators.braillevoice"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppBaseTheme" >
+       
+        <activity
+            android:name="com.technovators.braillevoice.HomeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.technovators.braillevoice.CallMenu"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:parentActivityName="com.technovators.braillevoice.HomeActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.technovators.braillevoice.HomeActivity" />
+
+            <intent-filter>
+                <action android:name="com.technovators.braillevoice.CALLMENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.technovators.braillevoice.VoiceMenu"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:parentActivityName="com.technovators.braillevoice.HomeActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.technovators.braillevoice.HomeActivity" />
+
+            <intent-filter>
+                <action android:name="com.technovators.braillevoice.VOICEMENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.technovators.braillevoice.LocationMenu"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:parentActivityName="com.technovators.braillevoice.HomeActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.technovators.braillevoice.HomeActivity" />
+
+            <intent-filter>
+                <action android:name="com.technovators.braillevoice.LOCATIONMENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.technovators.braillevoice.NewsMenu"
+            android:label="@string/app_name"
+            android:parentActivityName="com.technovators.braillevoice.HomeActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.technovators.braillevoice.HomeActivity" />
+
+            <intent-filter>
+                <action android:name="com.technovators.braillevoice.NEWSMENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.technovators.braillevoice.Prefs"
+            android:label="@string/app_name"
+            android:parentActivityName="com.technovators.braillevoice.Helpbutton"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.technovators.braillevoice.Helpbutton" />
+
+            <intent-filter>
+                <action android:name="com.technovators.braillevoice.PREFS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.technovators.braillevoice.HelplineMenu"
+            android:label="@string/app_name"
+            android:parentActivityName="com.technovators.braillevoice.HomeActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.technovators.braillevoice.HomeActivity" />
+
+            <intent-filter>
+                <action android:name="com.technovators.braillevoice.HELPLINEMENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.technovators.braillevoice.HelpButton"
+            android:label="@string/app_name"
+            android:parentActivityName="com.technovators.braillevoice.HomeActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.technovators.braillevoice.HomeActivity" />
+
+            <intent-filter>
+                <action android:name="com.technovators.braillevoice.HELPBUTTON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.technovators.braillevoice.About"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            
+            <intent-filter>
+                <action android:name="com.technovators.braillevoice.ABOUT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".PoliceHelplines" >
+        </activity>
+        <activity android:name=".Ambulances" >
+        </activity>
+        <activity android:name=".AntiRagging" >
+        </activity>
+        <activity android:name=".AntiTeasing" >
+        </activity>
+        <activity android:name=".FireStations" >
+        </activity>
+        <activity android:name=".OtherImportantNumbers" >
+        </activity>
+        <activity android:name=".WomenHelplines" >
+        </activity>
+
+        <receiver android:name=".MyReceiver" />
+
+        <service android:name=".MyUpdateService" />
+    </application>
+
+</manifest>

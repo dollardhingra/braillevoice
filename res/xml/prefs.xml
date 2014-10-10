@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+<EditTextPreference
+    android:title="Contact1"
+    android:key="name1"
+    android:summary="Add the contact numbers"/>
+<EditTextPreference
+    android:title="Contact2"
+    android:key="name2"
+    android:summary="Add the contact numbers"/>
+<EditTextPreference
+    android:title="Contact3"
+    android:key="name3"
+    android:summary="Add the contact numbers"/>
+
+<CheckBoxPreference
+    android:title="Vibration"
+    android:defaultValue="true"
+    android:key="checkbox1"
+    android:summary="On/Off"
+    />
+
+
+
+<CheckBoxPreference
+    android:title="TTS"
+    android:defaultValue="true"
+    android:key="checkbox4"
+    android:summary="TTS is Enabled/Disabled"
+    />
+
+
+
+  </PreferenceScreen>
+ 
